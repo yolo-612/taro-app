@@ -22,7 +22,7 @@ function mergeH5ConfigFunc () {
     publicPath: '/',
     output: outputCfg,
   } : {
-    publicPath: `https://xxx-static.xxx.com/yolo/scity`,  // 注意本地开发环境不能配置这个
+    publicPath: `https://xxx-static.xxx.com${process.env.TARO_APP_BASE_NAME}`,  // 注意本地开发环境不能配置这个
     output: outputCfg,
   };
   // 路由配置项
@@ -49,7 +49,9 @@ function mergeH5ConfigFunc () {
   // 基础配置项
   const baseConfig = process.env.NODE_ENV === 'development'
         ? {
-          open: '/yolo/index',
+          devServer: {
+            open: `${process.env.TARO_APP_BASE_NAME}/index`,
+          },
           output: outputCfg,
           router: routerCfg,
         } : {
