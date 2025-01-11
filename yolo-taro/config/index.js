@@ -1,3 +1,7 @@
+const path = require('path');
+
+const { mergeH5ConfigFunc } = require('./utils/merge');
+
 const config = {
   projectName: 'yolo-taro',
   date: '2025-1-5',
@@ -44,7 +48,12 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    // 智能分包
+    optimizeMainPackage: {
+      enable: true,
+    },
+
   },
   h5: {
     publicPath: '/',
@@ -64,6 +73,9 @@ const config = {
       }
     }
   },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'),
+  },
   rn: {
     appName: 'taroDemo',
     postcss: {
@@ -75,8 +87,9 @@ const config = {
 }
 
 module.exports = function (merge) {
+  const mergeH5Cfg = mergeH5ConfigFunc()
   if (process.env.NODE_ENV === 'development') {
-    return merge({}, config, require('./dev'))
+    return merge({}, config, require('./dev'), mergeH5Cfg)
   }
-  return merge({}, config, require('./prod'))
+  return merge({}, config, require('./prod'), mergeH5Cfg)
 }

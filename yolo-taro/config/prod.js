@@ -4,8 +4,17 @@ module.exports = {
   },
   defineConstants: {
   },
+  // css压缩工具
+  csso: {
+    enable: true,
+    config: {
+      // 配置项同 https://cssnano.co/docs/what-are-optimisations/
+    },
+  },
   mini: {},
   h5: {
+    enableSourceMap: true,
+    sourceMapType: 'source-map',
     /**
      * WebpackChain 插件配置
      * @docs https://github.com/neutrinojs/webpack-chain
