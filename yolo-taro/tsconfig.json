@@ -5,6 +5,7 @@
     "removeComments": false,
     "preserveConstEnums": true,
     "moduleResolution": "node",
+    "lib": ["es6", "dom", "node"],
     "experimentalDecorators": true,
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
