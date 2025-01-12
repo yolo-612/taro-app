@@ -16,13 +16,13 @@ function mergeH5ConfigFunc () {
   const outputCfg = {
     filename: 'js/[name].[fullhash:16].js',
     chunkFilename: 'js/[name].[chunkhash:16].js',
-    path: path.resolve(__dirname, `../../dist/`), // 构建文件存放目录
+    path: path.resolve(__dirname, `../../dist/${process.env.TARO_APP_ENV}/`), // 构建文件存放目录
   }
   const buildCfg = isHash ? {
     publicPath: '/',
     output: outputCfg,
   } : {
-    publicPath: `https://xxx-static.xxx.com${process.env.TARO_APP_BASE_NAME}`,  // 注意本地开发环境不能配置这个
+    publicPath: `https://xxx-${process.env.TARO_APP_ENV === 'sit' ? '.sit.' : ''}static.xxx.com${process.env.TARO_APP_BASE_NAME}`,  // 注意本地开发环境不能配置这个
     output: outputCfg,
   };
   // 路由配置项
