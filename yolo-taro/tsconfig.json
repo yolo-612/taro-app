@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
+    "lib": ["es6", "dom", "node"],
     "target": "es2017",
     "module": "commonjs",
     "removeComments": false,
     "preserveConstEnums": true,
     "moduleResolution": "node",
-    "lib": ["es6", "dom", "node"],
     "experimentalDecorators": true,
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
