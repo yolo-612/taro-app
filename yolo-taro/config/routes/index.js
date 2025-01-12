@@ -6,7 +6,7 @@ const customRoutes = {
 
 const browserRouterCfg = {
   mode: 'browser', // 'hash' | 'browser' | 'multi',
-  basename: '/yolo',
+  basename: process.env.TARO_APP_BASE_NAME,
   customRoutes,
 }
 

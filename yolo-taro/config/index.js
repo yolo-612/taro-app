@@ -1,6 +1,14 @@
 const path = require('path');
+const minimist = require('minimist');
 
 const { mergeH5ConfigFunc } = require('./utils/merge');
+
+const options = minimist(process.argv);
+
+const plugins = []
+if (options.blended) {
+  plugins.push([path.resolve(__dirname, '../plugins/plugin-mv.ts')])
+}  
 
 const config = {
   projectName: 'yolo-taro',
@@ -13,7 +21,7 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [],
+  plugins,
   defineConstants: {
   },
   copy: {
