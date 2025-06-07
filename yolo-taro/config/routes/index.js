@@ -16,6 +16,7 @@ const hashRouterCfg = {
 }
 
 module.exports = {
+  customRoutes,
   browserRouterCfg,
   hashRouterCfg
 }

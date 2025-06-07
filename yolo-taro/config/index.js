@@ -2,8 +2,18 @@ const path = require('path');
 const minimist = require('minimist');
 
 const { mergeH5ConfigFunc } = require('./utils/merge');
+const { generatorTempAppFile } = require('./utils/generatePageConfig');
+
+const { customRoutes } = require('./routes/index');
 
 const options = minimist(process.argv);
+
+// 根据定义的路由 确定要构建的页面
+const includePages = Object.keys(customRoutes);
+
+// 根据模板文件【app.config.tpl.h5 / app.config.tpl】+需要构建的页面includePages
+// 生成新的app.config.ts [实现按需构建页面]
+generatorTempAppFile(includePages, 'h5')
 
 const plugins = []
 if (options.blended) {
