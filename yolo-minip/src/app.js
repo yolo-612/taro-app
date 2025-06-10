@@ -1,6 +1,9 @@
+const { taroApp } = require('./taro_app.js')
+
 // app.js
 App({
-  onLaunch() {
+  onLaunch(options = {}) {
+    taroApp.onLaunch(options)
     // 展示本地存储能力
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

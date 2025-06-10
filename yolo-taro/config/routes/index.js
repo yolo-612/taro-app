@@ -1,6 +1,6 @@
 const customRoutes = {
   // "页面路径": "自定义路由"
-  '/pages/index/index': '/index', // 首页,
+  '/pages/taro-index/index': '/taro-index', // 首页,
   '/pages/second/index': '/second', // 副页,
 };
 

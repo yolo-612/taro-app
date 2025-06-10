@@ -6,14 +6,18 @@ const { generatorTempAppFile } = require('./utils/generatePageConfig');
 
 const { customRoutes } = require('./routes/index');
 
+// option参数整理：
+//   type： h5 | weapp
 const options = minimist(process.argv);
 
 // 根据定义的路由 确定要构建的页面
-const includePages = Object.keys(customRoutes);
+const includePages = options.type === 'h5' ? Object.keys(customRoutes) : [];
 
 // 根据模板文件【app.config.tpl.h5 / app.config.tpl】+需要构建的页面includePages
 // 生成新的app.config.ts [实现按需构建页面]
-generatorTempAppFile(includePages, 'h5')
+// 注意: includePages 不为空时，按照 includePages中的页面复制进入到app.config.ts 中【目前的h5端场景】
+//       includePages 为空时，直接复制相应的模板文件到 app.config.ts 【目前的weapp端场景】
+generatorTempAppFile(includePages, options.type)
 
 const plugins = []
 if (options.blended) {

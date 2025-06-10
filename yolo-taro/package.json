@@ -9,8 +9,7 @@
     "css": "sass"
   },
   "scripts": {
-    "dev:wxblended:h5": "taro build --type weapp --blended",
-    "dev:test:h5": "npm run dev:h5 -- --page /pages/index/index",
+    "build:weapp:blended": "taro build --type weapp --blended",
     "dev:weapp": "npm run build:weapp -- --watch",
     "dev:h5": "npm run build:h5 -- --watch",
     "build:sit:h5": "cross-env taro build --type h5 --mode sit",

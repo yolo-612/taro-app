@@ -1,0 +1,12 @@
+# Taro 生成文件
+src/base.wxml
+src/comp.json
+src/comp.js
+src/comp.wxml
+src/runtime.js
+src/taro_app.js
+src/taro.js
+src/utils.wxs
+src/vendors.js
+src/project.config.json
+src/project.private.config.json
