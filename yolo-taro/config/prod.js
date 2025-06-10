@@ -1,4 +1,7 @@
 module.exports = {
+  // 注意：这里的配置的环境变量只能在 业务代码 中使用，
+  // 无法在 node环境 代码中获取到其配置的值， 
+  // 也不会改变 node环境 中 process.env.NODE_ENV 的值。
   env: {
     NODE_ENV: '"production"'
   },

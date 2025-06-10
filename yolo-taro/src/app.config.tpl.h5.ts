@@ -1,5 +1,9 @@
 export default defineAppConfig({
-  pages: ["/pages/index/index", "/pages/second/index"],
+  pages: [
+    'pages/ceshi1/index/index',
+    'pages/ceshi1/detail/index',
+    'pages/ceshi1/docx/index',
+  ],
   subPackages: [],
   window: {
     backgroundTextStyle: 'light',
@@ -8,5 +12,5 @@ export default defineAppConfig({
     navigationBarTextStyle: 'black',
     backgroundColor: "#F4F4F4"
   },
-  animation: false
+  animation: false,
 });
