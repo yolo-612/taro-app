@@ -1,16 +1,19 @@
-import { View, Text } from '@tarojs/components'
-import { useLoad } from '@tarojs/taro'
-import './index.scss'
+// import { View, Swiper, SwiperItem } from '@tarojs/components'
+import MobileTopTabBar from './components/MobileTopTabBar'
+import style from './index.module.scss';
 
-export default function Index() {
+export default function CVInfo() {
 
-  useLoad(() => {
-    console.log('Page loaded.')
-  })
 
   return (
-    <View className='index'>
-      <Text>简历</Text>
-    </View>
+    <MobileTopTabBar/>
+    // <Swiper
+    //   vertical
+    //   circular
+    //   style="height: 100vh"
+    // >
+    //   <SwiperItem><View className="page">第一页</View></SwiperItem>
+    //   <SwiperItem><View className="page">第二页</View></SwiperItem>
+    // </Swiper>
   )
 }
