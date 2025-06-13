@@ -24,6 +24,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
+    "@reduxjs/toolkit": "^2.8.2",
     "@tarojs/components": "3.6.5",
     "@tarojs/helper": "3.6.5",
     "@tarojs/plugin-framework-react": "3.6.5",
@@ -39,7 +40,8 @@
     "@tarojs/shared": "3.6.5",
     "@tarojs/taro": "3.6.5",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

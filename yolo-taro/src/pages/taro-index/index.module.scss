@@ -1,5 +1,26 @@
-.index{
-  width: 100px;
-  height: 200px;
-  background-color: red;
+.index-box{
+  width: 100vw;
+  height: 100vh;
+}
+
+.demo-module-box{
+  .module-title{
+    background-color: skyblue;
+    margin-bottom: 20px;
+  }
+  .demo-store{
+    display: flex;
+    align-items: center;
+    .icon-item{
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      background-color: aliceblue;
+    }
+    .count-box{
+      font-size: 40px;
+      margin: 0 20px;
+    }
+  }
 }
