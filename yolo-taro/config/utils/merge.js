@@ -50,7 +50,7 @@ function mergeH5ConfigFunc () {
   const baseConfig = process.env.NODE_ENV === 'development'
         ? {
           devServer: {
-            open: `${process.env.TARO_APP_BASE_NAME}/index`,
+            open: `${process.env.TARO_APP_BASE_NAME}/taro-index`,
           },
           output: outputCfg,
           router: routerCfg,

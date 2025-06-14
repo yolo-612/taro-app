@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  pages: ["/pages/taro-index/index", "/pages/second/index", "/pages/cv-info/index"],
+  pages: ["/pages/taro-index/index", "/pages/cv-info/index"],
   subPackages: [],
   window: {
     backgroundTextStyle: 'light',
