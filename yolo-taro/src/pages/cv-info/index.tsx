@@ -2,6 +2,7 @@ import { useLoad } from '@tarojs/taro';
 import { View, Swiper, SwiperItem } from '@tarojs/components'
 import MobileTopTabBar from './components/MobileTopTabBar'
 import style from './index.module.scss';
+import FullPage from '@/components/FullPage';
 
 import { useAppSelector, useAppDispatch } from '@/common/hooks/app'
 import { setFootValue, setOverviewValue } from '@/store/modules/cvInfoSlice'
@@ -20,15 +21,12 @@ export default function CVInfo() {
   })
 
   return (
-    // <View>{JSON.stringify(cvInfo)}</View>
-    <MobileTopTabBar/>
-    // <Swiper
-    //   vertical
-    //   circular
-    //   style="height: 100vh"
-    // >
-    //   <SwiperItem><View className="page">第一页</View></SwiperItem>
-    //   <SwiperItem><View className="page">第二页</View></SwiperItem>
-    // </Swiper>
+    <FullPage>
+      <MobileTopTabBar/>
+      {/* <View>{JSON.stringify(cvInfo)}</View> */}
+      <View style={{ background: 'lightblue' }}>Page 1</View>
+      <View style={{ background: 'lightcoral' }}>Page 2</View>
+      <View style={{ background: 'lightgreen' }}>Page 3</View>
+    </FullPage>
   )
 }
