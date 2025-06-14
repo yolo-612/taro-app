@@ -2,10 +2,12 @@ import type { ThunkAction, Action } from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
 
 import counterSlice from '@/store/modules/counterSlice';
+import cvInfoSlice from '@/store/modules/cvInfoSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterSlice
+    counter: counterSlice,
+    cvInfo: cvInfoSlice
   }
 })
 
