@@ -42,9 +42,7 @@ export default function CVInfo() {
         handleDirectToPage={handleDirectToPage}
       />      
       <FullPage pageIndex={pageIndex} onPageChange={(index) => setPageIndex(index)}>
-        {/* Overview：包含个人基本信息、引言和描述列表
-          TODO： photoUrl需要优化
-          */}
+        {/* Overview：包含个人基本信息、引言和描述列表 */}
         <Page1OverView
           photoUrl={cvInfo.overview.photoUrl}
           infoList={cvInfo.overview.infoList}

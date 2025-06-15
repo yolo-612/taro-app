@@ -19,8 +19,7 @@ export default ({
 
         {/* 左侧：头像 + 信息列表 */}
         <View className={style['info']}>
-          <View className={style['photo']}>
-            <Image src={photoUrl} alt="photo" />
+          <View className={style['photo']} style={{ backgroundImage: `url(${photoUrl})` }}>
           </View>
 
           <View className={style['-list']}>
