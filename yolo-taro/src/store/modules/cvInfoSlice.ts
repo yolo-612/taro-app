@@ -30,7 +30,7 @@ export interface Header {
 type Footer = string[]
 
 // Overview：包含个人基本信息、引言和描述列表。
-interface Overview {
+export interface Overview {
   photoUrl: ImageResource;
   infoList: string[];
   quote: string;
@@ -38,7 +38,7 @@ interface Overview {
 }
 
 // Skill：包含外圈技能列表、内圈技能列表和技能描述列表。
-interface Skill {
+export interface Skill {
   outCircleList: {
     bg: {
       backgroundColor: string;
@@ -55,7 +55,7 @@ interface Skill {
 }
 
 // Experience：包含工作经验列表，每个经验项包含标题、时间、职位、图片和内容列表。
-interface Experience {
+export interface Experience {
   expList: {
     title: string;
     time: string;
@@ -69,7 +69,7 @@ interface Experience {
 }
 
 // Works：包含作品列表，每个作品项包含标题、描述、缩略图、URL和样式。
-interface Works {
+export interface Works {
   worksList: {
     title: string;
     des: string;
@@ -81,7 +81,7 @@ interface Works {
 }
 
 // Contact：包含联系信息，包括标题、描述列表、下载链接、文件列表和联系方式列表。
-interface Contact {
+export interface Contact {
   title: string;
   desList1: string[];
   desList2: string[];

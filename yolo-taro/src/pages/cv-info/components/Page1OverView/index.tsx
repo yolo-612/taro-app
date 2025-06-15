@@ -1,16 +1,9 @@
 import { View, Image } from '@tarojs/components';
 import style from './index.module.scss';
+import type { Overview } from '@/store/modules/cvInfoSlice'
 
-interface PropsType {
+interface PropsType extends Overview {
   className?: string;
-  /** 个人信息列表 */
-  infoList: string[];
-  /** 名言/引用 */
-  quote: string;
-  /** 描述内容列表 */
-  desList: string[];
-  /** 头像地址 */
-  photoUrl?: string;
 }
 
 export default ({

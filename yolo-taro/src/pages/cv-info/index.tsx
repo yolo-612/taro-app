@@ -51,7 +51,12 @@ export default function CVInfo() {
           quote={cvInfo.overview.quote}
           desList={cvInfo.overview.desList}
         />
-        <Page2Skill/>
+        {/* Skill：包含外圈技能列表、内圈技能列表和技能描述列表。 */}
+        <Page2Skill 
+          outCircleList={cvInfo.skill.outCircleList}
+          innerCircleList={cvInfo.skill.innerCircleList}
+          desList={cvInfo.skill.desList}
+        />
         <Page3Experience/>
         <Page4Work/>
         <Page5Contact/>

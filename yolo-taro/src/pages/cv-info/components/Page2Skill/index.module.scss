@@ -2,4 +2,126 @@
   width: 100%;
   height: 100%;
   background: rgb(77, 94, 143) url('@/assets/images/cv-info/bg.png');
+  position: relative;
+  .content {
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+    right: 5vw;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+
+    .skill-circle {
+      padding: 5px;
+      position: relative;
+      font-size: 18px;
+
+      // 外部定义 keyframes
+      @keyframes outX {
+        0% { left: -50px; }
+        100% { left: 450px; }
+      }
+
+      @keyframes outY {
+        0% { top: -50px; }
+        100% { top: 450px; }
+      }
+
+      @keyframes innerX {
+        0% { left: -40px; }
+        100% { left: 260px; }
+      }
+
+      @keyframes innerY {
+        0% { top: 260px; }
+        100% { top: -40px; }
+      }
+
+      // SCSS 动画混入
+      @mixin animationCombo($a1, $d1, $a2, $d2) {
+        animation: 
+          #{$a1} 8s cubic-bezier(0.36, 0, 0.64, 1) $d1 infinite alternate,
+          #{$a2} 8s cubic-bezier(0.36, 0, 0.64, 1) $d2 infinite alternate;
+      }
+
+      .out {
+        width: 500px;
+        height: 500px;
+        border: 8px dashed #999;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+
+        .item {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          position: absolute;
+          text-align: center;
+          line-height: 100px;
+          background: red;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+
+          &:nth-child(1) { @include animationCombo(outX, -4s, outY, 0s); }
+          &:nth-child(2) { @include animationCombo(outX, -6s, outY, -2s); }
+          &:nth-child(3) { @include animationCombo(outX, -8s, outY, -4s); }
+          &:nth-child(4) { @include animationCombo(outX, -10s, outY, -6s); }
+          &:nth-child(5) { @include animationCombo(outX, -12s, outY, -8s); }
+          &:nth-child(6) { @include animationCombo(outX, -14s, outY, -10s); }
+          &:nth-child(7) { @include animationCombo(outX, -16s, outY, -12s); }
+          &:nth-child(8) { @include animationCombo(outX, -18s, outY, -14s); }
+        }
+      }
+
+      .inner {
+        width: 300px;
+        height: 300px;
+        border: 8px dashed #999;
+        border-radius: 50%;
+        position: absolute;
+        text-align: center;
+        line-height: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &-item {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          position: absolute;
+          text-align: center;
+          line-height: 80px;
+          background: red;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+
+          &:nth-child(1) { @include animationCombo(innerX, -4s, innerY, 0s); }
+          &:nth-child(2) { @include animationCombo(innerX, -8s, innerY, -4s); }
+          &:nth-child(3) { @include animationCombo(innerX, -12s, innerY, -8s); }
+          &:nth-child(4) { @include animationCombo(innerX, -16s, innerY, -12s); }
+        }
+      }
+    }
+
+    .des {
+      margin-top: 100px;
+      line-height: 40px;
+      font-size: 26px;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .-des-en {
+      line-height: 30px;
+      font-size: 20px;
+    }
+  }
 }
