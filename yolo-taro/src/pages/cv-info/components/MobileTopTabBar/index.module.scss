@@ -36,7 +36,6 @@
     }
   }
   .nav {
-    height: 60px;
     position: absolute;
     top: 100px;
     width: 100%;
@@ -49,10 +48,11 @@
       justify-content: space-around;
       align-items: center;
       display: flex;
-      height: 60px;
       font-size: 26px;
       color: #fff;
-      .nav-item{}
+      .nav-item{
+        padding: 15px 0;
+      }
       .nav-item.-cur-index {
         color: #4b5b8b;
       }

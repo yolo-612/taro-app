@@ -73,7 +73,8 @@ export interface Works {
   worksList: {
     title: string;
     des: string;
-    mini: ImageResource;
+    mini?: ImageResource;
+    url?: string;
     style: Record<string, string>;
   }[];
   viewMore: string;

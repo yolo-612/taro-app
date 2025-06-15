@@ -59,7 +59,11 @@ export default function CVInfo() {
         <Page3Experience 
           expList={cvInfo.exp.expList}
         />
-        <Page4Work/>
+        <Page4Work 
+          worksList={cvInfo.works.worksList}
+          viewMore={cvInfo.works.viewMore}
+          gitUrl={cvInfo.works.gitUrl}
+        />
         <Page5Contact contact={cvInfo.contact}/>
       </FullPage>
     </View>
