@@ -12,6 +12,7 @@ import sSf from '@/assets/images/cv-info/s_sf.svg';
 import sBlog from '@/assets/images/cv-info/s_blog.svg';
 import wLs from '@/assets/images/cv-info/w_ls.jpg';
 import yj_gzh from '@/assets/images/cv-info/yj_gzh.jpg';
+import djs_avatar from '@/assets/images/cv-info/hd_20191.jpg'
 
 
 type ImageResource = string; // 图片资源的类型定义，通常是一个URL或路径
@@ -28,8 +29,9 @@ export interface Header {
 // Footer：包含版权信息等。
 type Footer = string[]
 
-// Overview：包含个人信息、引言和描述列表。
+// Overview：包含个人基本信息、引言和描述列表。
 interface Overview {
+  photoUrl: ImageResource;
   infoList: string[];
   quote: string;
   desList: string[];
@@ -133,6 +135,7 @@ const initialState: cvInfoState = {
   },
   footer: ['Released under the MIT License', 'All Rights Reserved ', `Copyright © 2014-${new Date().getFullYear()} Korey Zhao`],
   overview: {
+    photoUrl: djs_avatar,
     infoList: [`${new Date().getFullYear() - 1996}岁`, '硕士', '深圳', '在职'],
     quote: '善始者实繁,克终者盖寡',
     desList: ['我叫戴金森，毕业于南京邮电大学', '现于顺丰科技/客户渠道产品研发中心担任前端开发工程师', 'keruisiya0818@163.com']

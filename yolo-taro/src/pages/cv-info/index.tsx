@@ -30,7 +30,7 @@ export default function CVInfo() {
   useLoad(()=>{
     dispatch(setFootValue(['12Released under the MIT License', 'All Rights Reserved ', `Copyright © 2014-${new Date().getFullYear()} Korey Zhao`]))
     dispatch(setOverviewValue({
-      infoList: [`${new Date().getFullYear() - 1996}1岁`, '硕士', '深圳', '在职'],
+      infoList: [`${new Date().getFullYear() - 1996}岁`, '硕士', '深圳', '在职'],
     }))
   })
 
@@ -42,7 +42,15 @@ export default function CVInfo() {
         handleDirectToPage={handleDirectToPage}
       />      
       <FullPage pageIndex={pageIndex} onPageChange={(index) => setPageIndex(index)}>
-        <Page1OverView/>
+        {/* Overview：包含个人基本信息、引言和描述列表
+          TODO： photoUrl需要优化
+          */}
+        <Page1OverView
+          photoUrl={cvInfo.overview.photoUrl}
+          infoList={cvInfo.overview.infoList}
+          quote={cvInfo.overview.quote}
+          desList={cvInfo.overview.desList}
+        />
         <Page2Skill/>
         <Page3Experience/>
         <Page4Work/>
