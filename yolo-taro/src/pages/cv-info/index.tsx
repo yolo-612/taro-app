@@ -7,6 +7,11 @@ import { setFootValue, setOverviewValue } from '@/store/modules/cvInfoSlice'
 
 import FullPage from '@/components/FullPage';
 import MobileTopTabBar from './components/MobileTopTabBar'
+import Page1OverView from './components/Page1OverView';
+import Page2Skill from './components/Page2Skill';
+import Page3Experience from './components/Page3Experience';
+import Page4Work from './components/Page4Work';
+import Page5Contact from './components/Page5Contact';
 
 import style from './index.module.scss';
 
@@ -37,9 +42,11 @@ export default function CVInfo() {
         handleDirectToPage={handleDirectToPage}
       />      
       <FullPage pageIndex={pageIndex} onPageChange={(index) => setPageIndex(index)}>
-        <View className={style['overview']}>{pageIndex}</View>
-        <View style={{ background: 'lightcoral' }}>{pageIndex}</View>
-        <View style={{ background: 'lightgreen' }}>{pageIndex}</View>
+        <Page1OverView/>
+        <Page2Skill/>
+        <Page3Experience/>
+        <Page4Work/>
+        <Page5Contact/>
       </FullPage>
     </View>
   )
