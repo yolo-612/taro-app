@@ -36,10 +36,10 @@ export default function CVInfo() {
         pageIndex={pageIndex}
         handleDirectToPage={handleDirectToPage}
       />      
-      <FullPage>
-        <View className={style['overview']}></View>
-        <View style={{ background: 'lightcoral' }}>Page 2</View>
-        <View style={{ background: 'lightgreen' }}>Page 3</View>
+      <FullPage pageIndex={pageIndex} onPageChange={(index) => setPageIndex(index)}>
+        <View className={style['overview']}>{pageIndex}</View>
+        <View style={{ background: 'lightcoral' }}>{pageIndex}</View>
+        <View style={{ background: 'lightgreen' }}>{pageIndex}</View>
       </FullPage>
     </View>
   )
