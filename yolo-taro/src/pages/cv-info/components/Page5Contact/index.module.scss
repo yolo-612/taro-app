@@ -2,4 +2,110 @@
   width: 100%;
   height: 100%;
   background: rgb(162, 153, 113) url('@/assets/images/cv-info/bg.png');
+  position: relative;
+  .content {
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    right: 10vw;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    .words {
+      font-size: 36px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      .span {
+        &:nth-child(1) {
+          color: red;
+        }
+        &:nth-child(2) {
+          color: #3cf;
+        }
+        &:nth-child(3) {
+          color: #6c0;
+        }
+        &:nth-child(4) {
+          color: #7931ea;
+        }
+      }
+    }
+    .words-en {
+      font-size: 20px;
+    }
+    .idea {
+      margin-top: 100px;
+      .idea-item{
+        font-size: 32px;
+        margin: 16px 0;
+      }
+    }
+    .download {
+      margin: 100px auto 0;
+      width: 50vw;
+
+      .title {
+        margin-bottom: 50px;
+        font-size: 30px;
+      }
+      .list {
+        display: flex;
+        justify-content: space-between;
+        a {
+          font-size: 28px;
+          text-decoration: underline;
+          color: #046396;
+        }
+      }
+    }
+    .way {
+      display: flex;
+      justify-content: space-around;
+      margin: 100px auto 0;
+      width: 70vw;
+      &-item {
+        border-radius: 50%;
+        border: 2px solid #fff;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        &-img {
+          width: 65%;
+          height: 65%;
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          transform: translateX(50%) translateY(-50%);
+          background: no-repeat center center;
+          background-size: contain;
+        }
+        &:nth-child(1) {
+          .way-item-img {
+            background-image: url('@/assets/images/cv-info/s_github.svg');
+          }
+        }
+        &:nth-child(2) {
+          .way-item-img {
+            background-image: url('@/assets/images/cv-info/s_sf.svg');
+          }
+        }
+        &:nth-child(3) {
+          .way-item-img {
+            background-image: url('@/assets/images/cv-info/s_blog.svg');
+          }
+        }
+        // &:nth-child(4) {
+        //   .way-item-img {
+        //     background-image: url('@/assets/images/cv-info/assets/s_zh.svg');
+        //   }
+        // }
+        // &:nth-child(5) {
+        //   .way-item-img {
+        //     background-image: url('@/assets/images/cv-info/assets/s_Jj.svg');
+        //   }
+        // }
+      }
+    }
+  }
 }

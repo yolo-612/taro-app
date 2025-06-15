@@ -62,7 +62,7 @@ export default function CVInfo() {
           expList={cvInfo.exp.expList}
         />
         <Page4Work/>
-        <Page5Contact/>
+        <Page5Contact contact={cvInfo.contact}/>
       </FullPage>
     </View>
   )
