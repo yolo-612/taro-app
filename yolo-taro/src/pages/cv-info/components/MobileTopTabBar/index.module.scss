@@ -5,4 +5,61 @@
   top: 0;
   height: 120px;
   position: absolute;
+  .title {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    .title-content {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -30px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #fff;
+        transition: 0.5s;
+      }
+    }
+    .-rotate {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .nav {
+    height: 60px;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    font-size: 13px;
+    background-color: hsla(0, 0%, 100%, 0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+    .ul {
+      justify-content: space-around;
+      align-items: center;
+      display: flex;
+      height: 60px;
+      font-size: 26px;
+      color: #fff;
+      .nav-item{}
+      .nav-item.-cur-index {
+        color: #4b5b8b;
+      }
+    }
+  }
+  .show-nav {
+    visibility: visible;
+    opacity: 1;
+  }
 }

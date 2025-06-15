@@ -17,7 +17,7 @@ import yj_gzh from '@/assets/images/cv-info/yj_gzh.jpg';
 type ImageResource = string; // 图片资源的类型定义，通常是一个URL或路径
 
 // Header：包含语言列表和标题列表。
-interface Header {
+export interface Header {
   langList: string[];
   titleList: {
     svg: ImageResource;
