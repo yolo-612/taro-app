@@ -3,6 +3,7 @@ import style from './index.module.scss';
 import type { Skill } from '@/store/modules/cvInfoSlice'
 interface PropsType extends Skill {
   className?: string;
+  isEng?: boolean;
 }
 
 export default ({

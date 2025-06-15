@@ -57,7 +57,10 @@ export default function CVInfo() {
           innerCircleList={cvInfo.skill.innerCircleList}
           desList={cvInfo.skill.desList}
         />
-        <Page3Experience/>
+        {/* Experience：包含工作经验列表，每个经验项包含标题、时间、职位、图片和内容列表。 */}
+        <Page3Experience 
+          expList={cvInfo.exp.expList}
+        />
         <Page4Work/>
         <Page5Contact/>
       </FullPage>

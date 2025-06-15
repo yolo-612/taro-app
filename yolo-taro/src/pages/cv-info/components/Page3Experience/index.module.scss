@@ -2,4 +2,145 @@
   width: 100%;
   height: 100%;
   background: rgb(148, 92, 76) url('@/assets/images/cv-info/bg.png');
+  position: relative;
+  .content {
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    right: 0;
+    perspective: 3000px;
+    .slider {
+      position: relative;
+      width: 80vw;
+      height: 55vh;
+      background: #f2f4f5;
+      margin: 0 auto;
+      padding: 0 5vw;
+      border-radius: 10px;
+      color: #000;
+      transition: transform 0.3s linear;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+      border: 1px solid #eee;
+      display: flex;
+      justify-content: center;
+      &-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .img {
+          background: center center no-repeat;
+          background-size: contain;
+          width: 400px;
+          height: 150px;
+          margin: 50px auto 0;
+        }
+        h4 {
+          color: #945c4c;
+          font-size: 32px;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .-time {
+          color: #af7464;
+          font-size: 26px;
+        }
+        .-post {
+          color: #9e6351;
+          font-size: 26px;
+          margin: 0 auto 50px;
+          text-align: center;
+        }
+        .-tech {
+          color: #9e6351;
+          font-size: 14px;
+        }
+        .-list {
+          .exp-item {
+            font-size: 24px;
+            line-height: 32px;
+            margin: 12px 0;
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: -3vw;
+              width: 10px;
+              height: 10px;
+              -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+              border-radius: 50%;
+              background-color: #af7464;
+            }
+          }
+        }
+        &:nth-child(1) {
+          .img {
+            background-image: url('@/assets/images/cv-info/logo_tx.png');
+          }
+        }
+        &:nth-child(2) {
+          .img {
+            background-image: url('@/assets/images/cv-info/logo_jm.png');
+          }
+        }
+        &:nth-child(3) {
+          .img {
+            background-image: url('@/assets/images/cv-info/logo_lt.png');
+          }
+        }
+        &:nth-child(4) {
+          .img {
+            background-image: url('@/assets/images/cv-info/logo_zh.png');
+          }
+        }
+      }
+      .-active {
+        animation: switchWork 0.4s;
+      }
+      @keyframes switchWork {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    .shout-cut {
+      width: 50vw;
+      margin: 0 auto;
+      padding-top: 15vh;
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 101;
+        li {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #623c32;
+          cursor: pointer;
+          transition: background-color 0.3s linear;
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            left: -30px;
+            bottom: -30px;
+          }
+        }
+        .-selected {
+          background-color: #af7164;
+        }
+      }
+    }
+  }
 }
