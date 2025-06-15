@@ -11,7 +11,7 @@ export default ({
   infoList,
   quote,
   desList,
-  photoUrl = '/assets/hd_201911.jpg', // 默认头像路径
+  photoUrl,
 }: PropsType) => {
   return (
     <View className={`${style['overview']} ${className || ''}`}>
