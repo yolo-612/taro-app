@@ -12,3 +12,5 @@ eslint和提交钩子
 
 
 release/project-dev分支为项目工程化开发分支
+
+测试git一下，【后面记得删】
